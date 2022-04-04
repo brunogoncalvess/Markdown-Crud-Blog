@@ -35,6 +35,6 @@ const postsRoute = require('./routes/posts')
 const post = require('./models/post')
 app.use('/posts', postsRoute)
 
-app.listen(process.env.PORT, () => {
-    console.log(`Listening to port ${process.env.PORT}`)
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Listening to port 3000`)
 })
