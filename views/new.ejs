@@ -1,0 +1,20 @@
+<form action="/posts" method="POST" class="form-post">
+    <label for="title" class="label form-label">Title</label>
+    <input type="text" name="title" id="title" class="input title-field" autofocus value="<%= post.title %>"/>
+    <small class="error-message"><%= locals.message %></small>
+
+    <label for="desc" class="form-label">Description</label>
+    <input type="text" name="desc" id="desc" class="input des-field" value="<%= post.desc %>"/><br />
+    
+
+    <label for="content" class="form-label">Content</label>
+    <textarea name="content" id="content" cols="30" rows="10" class="input"><%= post.content %></textarea>
+    <small class="error-message"><%= locals.message %></small>
+    
+    <div class="btn-wrapper">
+        <a href="/">
+            <div class="btn">Cancel</div>
+        </a>
+        <button type="submit">Submit</button>
+    </div>
+</form>

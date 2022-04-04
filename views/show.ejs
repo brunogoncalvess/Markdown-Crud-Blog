@@ -1,0 +1,11 @@
+<h1><%= post.title %></h1>
+    <small class="date-show"><%= post.createdAt.toLocaleDateString() %></small>
+        <div class="btn-wrapper">
+            <a href="/">
+                <div class="btn">All Posts</div>
+            </a>
+            <a href="edit/<%= post.id %>">
+                <div class="btn">Edit</div>
+            </a>
+        </div> 
+<p><%- post.marked %></p>

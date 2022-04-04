@@ -1,0 +1,17 @@
+<form action="/posts/<%= post.id %>?_method=PUT" method="POST">
+    <label for="title" class="label form-label">Title</label>
+    <input type="text" name="title" id="title" value="<%= post.title %> " class="input title-field" ><br>
+    
+    <label for="desc" class="form-label">Description</label>
+    <input type="text" name="desc" id="desc" value="<%= post.desc %> " class="input des-field"><br>
+
+    <label for="content" class="label">Content</label>
+    <textarea name="content" id="content" cols="30" rows="10" class="input"><%= post.content %> </textarea><br>
+
+    <div class="btn-wrapper">
+        <a href="/">
+            <div class="btn">Cancel</div>
+        </a>
+        <button type="submit">Submit</button>
+    </div>
+</form> 

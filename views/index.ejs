@@ -1,0 +1,20 @@
+
+<% posts.forEach(post => {  %>
+    <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+        <h2><%= post.title %></h2>
+        <small class="date"><%= post.createdAt.toLocaleDateString() %></small><br>
+        <small><%= post.desc %></small><br>
+            <div class="btn-wrapper">
+                
+                <a href="/posts/<%= post.id %>">                
+                    <div class="btn">Read More</div>
+                </a>
+                
+                <a href="posts/edit/<%= post.id %> ">
+                    <div class="btn">Edit</div>
+                </a>
+
+                <button type="submit">Delete</button>
+            </div>
+    </form>
+<% }) %>
